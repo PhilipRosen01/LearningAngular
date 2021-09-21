@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ContentCardComponent } from './content-card/content-card.component';
+import { ContentList } from './helper-files/content-list';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +14,7 @@ import { ContentCardComponent } from './content-card/content-card.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ContentList],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

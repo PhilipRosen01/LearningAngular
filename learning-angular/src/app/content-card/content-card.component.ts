@@ -1,5 +1,5 @@
-import { Content } from '@angular/compiler/src/render3/r3_ast';
 import { Component, OnInit } from '@angular/core';
+import { Content } from '../helper-files/content-interface';
 import { ContentList } from '../helper-files/content-list';
 
 @Component({
@@ -19,7 +19,7 @@ export class ContentCardComponent implements OnInit {
     let content1: Content = {
       id: 0,
       author: "Philip",
-      image: "google",
+      imgUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
       type: "website",
       title: "myWebsite",
       body: "this is my website",
