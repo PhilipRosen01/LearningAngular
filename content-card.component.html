@@ -1,0 +1,23 @@
+<img (click)="showId()" [src]="song.imgUrl" *ngIf="song.imgUrl else imageDefault">
+<ng-template #imageDefault>
+    <img class="image" src="https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg">
+</ng-template>
+
+<div class="author">
+    <strong>Artist:</strong> {{song.author}}
+</div>
+<div class="title" appHoverStyle>
+    <strong>Song Title:</strong> {{song.title}}
+</div>
+<div class="body">
+    {{song.body}}
+</div>
+<div class="type" *ngIf="song.type">
+    <strong>Genre:</strong> {{song.type}}
+</div>
+<div class="tags" *ngIf="song.tags">
+    <strong>Tags:</strong>
+    <span class="tag" *ngFor="let tag of song.tags; last as isLast" appHoverStyle>
+        {{ tag }}<span *ngIf="!isLast">, </span>
+    </span>
+</div>
